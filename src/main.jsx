@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import { pokemonsReducer } from './reducers/pokemons.jsx'
+import { rootReducer } from './reducers/rootReducer.jsx'
 import { Provider } from 'react-redux'
 import { applyMiddleware, compose, legacy_createStore as createStore } from 'redux'
 import { thunk } from 'redux-thunk'
@@ -14,7 +14,7 @@ const composedEnhacers = composeAlt(
   );
 
 const store = createStore(
-    pokemonsReducer,
+    rootReducer,
     composedEnhacers
   );
 
